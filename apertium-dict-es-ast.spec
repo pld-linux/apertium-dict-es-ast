@@ -2,15 +2,16 @@ Summary:	Spanish-Asturian language pair for Apertium
 Summary(pl.UTF-8):	Para języków hiszpański-asturski dla Apertium
 %define	lpair	es-ast
 Name:		apertium-dict-%{lpair}
-Version:	1.0.0
+Version:	1.1.0
 Release:	1
 License:	GPL v2+
 Group:		Applications/Text
 Source0:	http://downloads.sourceforge.net/apertium/apertium-%{lpair}-%{version}.tar.gz
-# Source0-md5:	20be6eae60bd16bae04c93e761724e1c
+# Source0-md5:	787320214c2f35b6caffe1cac0e010bc
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.apertium.org/
 BuildRequires:	apertium-devel >= 3.2.0
+BuildRequires:	apertium-pn-recogniser
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	libxslt-progs
@@ -59,4 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %{_datadir}/apertium/apertium-%{lpair}
+%{_datadir}/apertium/modes/ast-es-pn.mode
 %{_datadir}/apertium/modes/es-ast.mode
+%{_datadir}/apertium/modes/es-ast-pn.mode

@@ -1,6 +1,6 @@
---- apertium-es-ast-1.0.0/Makefile.am.orig	2010-02-06 03:01:51.000000000 +0100
-+++ apertium-es-ast-1.0.0/Makefile.am	2010-12-08 16:01:34.794121097 +0100
-@@ -126,10 +126,10 @@
+--- apertium-es-ast-1.1.0/Makefile.am.orig	2010-12-22 10:16:30.000000000 +0100
++++ apertium-es-ast-1.1.0/Makefile.am	2010-12-29 18:41:25.506121936 +0100
+@@ -127,13 +127,13 @@
  		  
  install-data-local:
  	apertium-gen-modes modes.xml apertium-$(PREFIX1)
@@ -8,10 +8,16 @@
 -	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(apertium_es_astdir)
 -	$(INSTALL_DATA) $(BASENAME).post-$(PREFIX1).t1x $(apertium_es_astdir)
 -	$(INSTALL_DATA) $(BASENAME).$(PREFIX2).t1x $(apertium_es_astdir)
+-	$(INSTALL_DATA) $(PREFIX1)-pn.mode $(apertium_es_modesdir)
+-	$(INSTALL_DATA) $(PREFIX2)-pn.mode $(apertium_es_modesdir)
+-#	$(INSTALL_DATA) $(PREFIX2).mode $(apertium_es_modesdir)
 +	$(INSTALL_DATA) $(PREFIX1).mode $(DESTDIR)$(apertium_es_modesdir)
 +	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(DESTDIR)$(apertium_es_astdir)
 +	$(INSTALL_DATA) $(BASENAME).post-$(PREFIX1).t1x $(DESTDIR)$(apertium_es_astdir)
 +	$(INSTALL_DATA) $(BASENAME).$(PREFIX2).t1x $(DESTDIR)$(apertium_es_astdir)
++	$(INSTALL_DATA) $(PREFIX1)-pn.mode $(DESTDIR)$(apertium_es_modesdir)
++	$(INSTALL_DATA) $(PREFIX2)-pn.mode $(DESTDIR)$(apertium_es_modesdir)
++#	$(INSTALL_DATA) $(PREFIX2).mode $(DESTDIR)$(apertium_es_modesdir)
  
- #	$(INSTALL_DATA) $(PREFIX1)-pn.mode $(apertium_es_modesdir)
- #	$(INSTALL_DATA) $(PREFIX2)-pn.mode $(apertium_es_modesdir)
+ CLEANFILES = -rf $(TARGETS_COMMON) modes *~
+ 
